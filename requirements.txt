@@ -1,0 +1,5 @@
+# Streamlit Community Cloud installs the modules listed here when you deploy.
+# Streamlit Community Cloud installs the modules listed here when you deploy.
+requests
+pandas
+pydantic-ai
