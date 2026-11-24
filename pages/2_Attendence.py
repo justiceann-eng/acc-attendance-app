@@ -1,16 +1,14 @@
 # Lab 3: API data page - ACC football attendance explorer
 # Data: College Football Data API (https://api.collegefootballdata.com/games)
-# All processing below is our own Python code (no AI on this page).
 
 import requests
 import streamlit as st
 import pandas as pd
 
 BASE_URL = "https://api.collegefootballdata.com/games"
-SEASONS = [2021, 2022, 2023, 2024, 2025]  # 2020 skipped (COVID-limited crowds)
+SEASONS = [2021, 2022, 2023, 2024, 2025]  
 
-# Stadium capacities for the 18 ACC schools (approximate - double-check before the demo).
-# Keys must match the team names the API uses.
+# Stadium capacities for the 18 ACC schools 
 ACC_CAPACITY = {
     "Boston College": 44500,
     "California": 62467,
@@ -102,7 +100,6 @@ def opponent_factor(df: pd.DataFrame, opponent: str):
     return sum(ratios) / len(ratios), len(ratios)
 
 
-# ---------------- Page ----------------
 st.title("ACC Football Attendance ")
 st.write(
     "These graphs are designed to be used by athletic department staff. You can look at past home attendance, then estimate "
